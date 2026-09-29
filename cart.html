@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="ka">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cart - Restaurant Menu</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <header>
+      <nav class="scrolled">
+        <a href="index.html">
+          <img src="./img/img2.png" alt="" />
+        </a>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li>
+            <a href="cart.html" class="active">
+              Cart <i class="fa-solid fa-cart-shopping"></i>
+            </a>
+          </li>
+        </ul>
+      </nav>
+      <div class="slogan">
+        <h1>My Cart</h1>
+      </div>
+    </header>
+    <main class="cartPageMain">
+      <div id="cartPageItems" class="cartPageContainer">
+        <p class="loadingText">იტვირთება კალათა...</p>
+      </div>
+
+      <div class="cartSummaryCard">
+        <h3>ORDER SUMMARY</h3>
+        <div class="summaryRow">
+          <span>Total Amount:</span>
+          <strong><span id="cartPageTotal">0.00</span> ₾</strong>
+        </div>
+        <button class="checkoutBtn" onclick="checkout()">
+          <i class="fa-solid fa-credit-card"></i> Buy Now / Checkout
+        </button>
+      </div>
+    </main>
+    <footer>
+      <h3>© Step Ordering 2026, All rights reserved</h3>
+    </footer>
+    <script src="cart.js"></script>
+  </body>
+</html>

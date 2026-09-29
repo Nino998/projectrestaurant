@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="ka">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Restaurant Menu</title>
+    <link rel="stylesheet" href="style.css"/>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <header>
+      <nav>
+        <a href="index.html">
+          <img src="./img/img2.png" alt=""/>
+        </a>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li>
+            <a href="cart.html">
+              Cart <i class="fa-solid fa-cart-shopping"></i>
+            </a>
+          </li>
+        </ul>
+      </nav>
+      <div class="slogan">
+        <h1>Fast and efficient, online ordering you must try.</h1>
+      </div>
+    </header>
+
+    <main>
+      <h1>Categories</h1>
+
+      <ul class="categories"></ul>
+
+      <div class="contentWrapper">
+        <aside class="filterSidebar">
+          <h3>FILTERS</h3>
+          <div class="filterGroup">
+            <label for="spicinessFilter">
+              Spiciness: <span id="spicinessValue">All</span>
+            </label>
+            <input
+              type="range"
+              id="spicinessFilter"
+              min="0"
+              max="5"
+              value="5"
+              oninput="updateSpicinessLabel(this.value)"
+              onchange="applyFilters()"
+            />
+          </div>
+
+          <div class="checkboxGroup">
+            <label>
+              <input
+                type="checkbox"
+                id="noNutsFilter"
+                onchange="applyFilters()"
+              />
+              No Nuts
+            </label>
+            <label>
+              <input
+                type="checkbox"
+                id="vegOnlyFilter"
+                onchange="applyFilters()"
+              />
+              Vegetarian
+            </label>
+          </div>
+
+          <div class="filterButtons">
+            <button class="applyBtn" onclick="applyFilters()">Apply</button>
+            <button class="clearBtn" onclick="clearFilters()">Clear</button>
+          </div>
+        </aside>
+
+        <section class="container"></section>
+      </div>
+    </main>
+
+    <footer>
+      <h3>© Step Ordering 2026, All rights reserved</h3>
+    </footer>
+
+    <script src="main.js"></script>
+  </body>
+</html>
